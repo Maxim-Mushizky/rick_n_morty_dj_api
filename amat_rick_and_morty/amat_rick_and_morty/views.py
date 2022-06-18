@@ -7,9 +7,15 @@ from .api_requests import get_character_data_by_name
 from . import logics
 from django.shortcuts import render
 
+characters = [{'name': 'rick'}, {'name': 'morty'}]
+
 
 def home(request):
-    return render(request, 'home.html', {})
+    return render(request, 'home.html', context={'characters': characters})
+
+def room(request):
+    return render(request, 'room.html', context={})
+
 
 
 @api_view(['GET'])

@@ -21,6 +21,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path("", views.home, name='home'),
+    path("room", views.room, name='room'),
     path('api_schema/', get_schema_view(title='API schema',
                                         description="Rick & Morty REST API guide"), name="api_schema"),
     path("swagger-ui/", TemplateView.as_view(

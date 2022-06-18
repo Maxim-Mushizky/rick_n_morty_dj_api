@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Character
+from . import models
 
-admin.site.register(Character)
+admin.site.register(models.Character)
+admin.site.register(models.Room)

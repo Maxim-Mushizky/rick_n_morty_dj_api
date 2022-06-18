@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>AMAT Rick and Morty API home page</title>
-</head>
-<body>
-    <h1>AMAT Rick and Morty API home page</h1>
+{% extends 'main.html' %}
 
-</body>
-</html>
+{% block content %}
+<h1>Rick & Morty Learning Rest API</h1>
+<div>
+    <div>
+       {% for char in characters %}
+        <div>
+            <h5>{{char.name}}</h5>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

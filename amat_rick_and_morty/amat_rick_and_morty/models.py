@@ -4,6 +4,17 @@ from pydantic import ValidationError, validator
 from typing import List
 
 
+class Room(models.Model):
+    name = models.CharField(max_length=200)
+    description = models.TextField(null=True, blank=True)
+    # participants =
+    updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+
 class Character(models.Model):
     status: str = models.CharField(max_length=200)
     species: str = models.CharField(max_length=200)
