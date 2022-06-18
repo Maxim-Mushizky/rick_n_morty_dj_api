@@ -1,0 +1,2 @@
+docker build --tag amat_rick_and_morty_rest_api .
+docker run --publish 8000:8000 amat_rick_and_morty_rest_api
